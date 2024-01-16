@@ -41,6 +41,19 @@ patch -p1 <0001-SettingsProvider-Resolve-google-gms-configurator-denials.patch
 patch -p1 <0002-Remove-read-device-config-checks.patch
 cd ../..
 
+# Dolby
+echo 'Adding Dolby patch'
+cd frameworks/av
+wget https://raw.githubusercontent.com/xiaomi-haydn-devs/Patch-Haydn/udc-14/Dolby/0001-Add-support-for-loading-prebuilt-ddp-and-ac4-decoder-lib.patch
+wget https://raw.githubusercontent.com/xiaomi-haydn-devs/Patch-Haydn/udc-14/Dolby/0002-OMX-Remove-support-for-prebuilt-ac4-decoder.patch
+wget https://raw.githubusercontent.com/xiaomi-haydn-devs/Patch-Haydn/udc-14/Dolby/0003-media-OMXStore-Import-loading-libstagefrightdolby.patch
+wget https://raw.githubusercontent.com/xiaomi-haydn-devs/Patch-Haydn/udc-14/Dolby/0004-Import-Dolby-Effects-initialization.patch
+patch -p1 <0001-Add-support-for-loading-prebuilt-ddp-and-ac4-decoder-lib.patch
+patch -p1 <0002-OMX-Remove-support-for-prebuilt-ac4-decoder.patch
+patch -p1 <0003-media-OMXStore-Import-loading-libstagefrightdolby.patch
+patch -p1 <0004-Import-Dolby-Effects-initialization.patch
+cd ../..
+
 # Optimization
 echo 'Adding optimization patch'
 cd frameworks/base
