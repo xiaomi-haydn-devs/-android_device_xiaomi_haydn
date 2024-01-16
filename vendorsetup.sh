@@ -23,6 +23,15 @@ wget https://raw.githubusercontent.com/xiaomi-haydn-devs/Patch-Haydn/14/VoNR/000
 patch -p1 <0001-Enable-VoNR-by-default.patch
 cd ../..
 
+# Dolby
+echo 'Adding Dolby patch'
+cd frameworks/av
+wget https://raw.githubusercontent.com/xiaomi-haydn-devs/Patch-Haydn/udc-14/Dolby/0003-media-OMXStore-Import-loading-libstagefrightdolby.patch
+wget https://raw.githubusercontent.com/xiaomi-haydn-devs/Patch-Haydn/udc-14/Dolby/0004-Import-Dolby-Effects-initialization.patch
+patch -p1 <0003-media-OMXStore-Import-loading-libstagefrightdolby.patch
+patch -p1 <0004-Import-Dolby-Effects-initialization.patch
+cd ../..
+
 # USB Charging
 echo 'Removing USB charging notification'
 cd frameworks/base
