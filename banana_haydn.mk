@@ -28,7 +28,7 @@ WITH_GAPPS := true
 TARGET_BOOT_ANIMATION_RES := 1080
 
 PRODUCT_SYSTEM_PROPERTIES += \
-    ro.banana.maintainer=Akshay
+    ro.banana.maintainer=Akshay \
     ro.face.sense_service.camera_id=1
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
