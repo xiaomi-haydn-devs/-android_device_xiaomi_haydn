@@ -26,6 +26,7 @@ PRODUCT_SYSTEM_DEVICE := haydn
 # BananaDroid
 WITH_GAPPS := true
 TARGET_BOOT_ANIMATION_RES := 1080
+TARGET_ENABLE_BLUR := true
 
 PRODUCT_SYSTEM_PROPERTIES += \
     ro.banana.maintainer=Akshay \
