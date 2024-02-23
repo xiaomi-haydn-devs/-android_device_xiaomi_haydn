@@ -20,10 +20,19 @@ git clone https://github.com/xiaomi-haydn-devs/proprietary_vendor_xiaomi_sm8350-
 echo 'Cloning firmware'
 git clone --depth=1 https://gitlab.com/Alucard_Storm/vendor_xiaomi_haydn-firmware.git -b thirteen vendor/xiaomi/haydn-firmware
 
+# Xiaomi
+echo 'Cloning hardware xiaomi'
+rm -rf hardware/xiaomi && git clone --depth=1 https://github.com/LineageOS/android_hardware_xiaomi -b lineage-21 hardware/xiaomi
+
 # Camera
 echo 'Cloning Leica camera'
 git clone --depth=1 https://gitlab.com/Alucard_Storm/haydn-miuicamera.git -b fourteen-leica vendor/xiaomi/haydn-miuicamera
 rm -rf hardware/xiaomi/megvii
+
+# Pgo-Profiles
+echo 'Cloning Pgo-Profiles from Crdroid'
+rm -rf toolchain/pgo-profiles
+git clone --depth=1 https://github.com/crdroidandroid/android_toolchain_pgo-profiles.git toolchain/pgo-profiles
 
 # Leica patch
 echo 'Adding Leica camera patch'
