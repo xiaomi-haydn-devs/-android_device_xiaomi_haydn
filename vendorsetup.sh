@@ -22,7 +22,7 @@ rm -rf hardware/xiaomi && git clone --depth=1 https://github.com/LineageOS/andro
 
 # Kernel tools
 echo 'Cloning prebuilts kernel-build-tools'
-rm -rf prebuilts/kernel-build-tools && git clone --depth=1 https://github.com/PixelExperience-Staging/prebuilts_kernel-build-tools -b fourteen prebuilts/kernel-build-tools
+rm -rf prebuilts/kernel-build-tools && git clone --depth=1 https://github.com/PixelExperience/prebuilts_kernel-build-tools -b fourteen prebuilts/kernel-build-tools
 
 # Firmware
 echo 'Cloning firmware'
@@ -54,20 +54,11 @@ wget https://raw.githubusercontent.com/xiaomi-haydn-devs/Patch-Haydn/14/VoNR/000
 patch -p1 <0001-Enable-VoNR-by-default.patch
 cd ../..
 
-# Gms
-echo 'Adding Gms patch'
-cd frameworks/base
-wget https://raw.githubusercontent.com/xiaomi-haydn-devs/Patch-Haydn/14/Gms/0001-SettingsProvider-Resolve-google-gms-configurator-denials.patch
-patch -p1 <0001-SettingsProvider-Resolve-google-gms-configurator-denials.patch
-cd ../..
-
 # Dolby
 echo 'Adding Dolby patch'
 cd frameworks/av
-wget https://raw.githubusercontent.com/xiaomi-haydn-devs/Patch-Haydn/udc-14/Dolby/0003-media-OMXStore-Import-loading-libstagefrightdolby.patch
-wget https://raw.githubusercontent.com/xiaomi-haydn-devs/Patch-Haydn/udc-14/Dolby/0004-Import-Dolby-Effects-initialization.patch
+wget https://raw.githubusercontent.com/xiaomi-haydn-devs/Patch-Haydn/14/Dolby/0003-media-OMXStore-Import-loading-libstagefrightdolby.patch
 patch -p1 <0003-media-OMXStore-Import-loading-libstagefrightdolby.patch
-patch -p1 <0004-Import-Dolby-Effects-initialization.patch
 cd ../..
 
 # Optimization
