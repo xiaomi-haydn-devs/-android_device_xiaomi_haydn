@@ -34,6 +34,9 @@ patch -p1 <0001-Add-backwards-compatible-CaptureResultExtras-constructor.patch
 patch -p1 <0002-Expose-aux-camera-if-packagename-is-null.patch
 cd ../..
 
+# Signature Keys
+git clone --depth=1 https://github.com/xiaomi-haydn-devs/priv_keys.git vendor/xiaomi/priv-keys
+
 # Audio
 echo 'Adding audio-app support'
 cd system/core
