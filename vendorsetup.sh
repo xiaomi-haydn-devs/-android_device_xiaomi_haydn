@@ -26,4 +26,8 @@ echo 'Cloning Leica camera'
 git clone --depth=1 https://gitlab.com/Alucard_Storm/haydn-miuicamera -b fourteen-leica vendor/xiaomi/haydn-miuicamera
 rm -rf hardware/xiaomi/megvii
 
+# Signature Keys
+echo 'Cloning Signing keys'
+git clone --depth=1 https://github.com/xiaomi-haydn-devs/priv_keys.git vendor/xiaomi/priv-keys
+
 echo 'delete vendorsetup.sh from device tree once this is done'
