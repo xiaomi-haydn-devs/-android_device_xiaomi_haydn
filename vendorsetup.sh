@@ -29,6 +29,10 @@ echo 'Cloning Leica camera'
 git clone --depth=1 https://gitlab.com/Alucard_Storm/haydn-miuicamera.git -b fourteen-leica vendor/xiaomi/haydn-miuicamera
 rm -rf hardware/xiaomi/megvii
 
+# Signature Keys
+rm -rf vendor/rising/signing/keys
+git clone --depth=1 https://github.com/xiaomi-haydn-devs/priv_keys.git vendor/rising/signing/keys
+
 # VoNR
 echo 'Enabling VoNR by default'
 cd frameworks/base
