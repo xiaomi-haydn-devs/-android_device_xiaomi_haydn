@@ -30,6 +30,9 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
 
 BUILD_FINGERPRINT := Xiaomi/haydn_global/haydn:14/UKQ1.231207.002/V816.0.2.0.UKKMIXM:user/release-keys
 
+PRODUCT_PRODUCT_PROPERTIES += \
+    ro.build.fingerprint=$(BUILD_FINGERPRINT)
+
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
 
 # Sign Builds
